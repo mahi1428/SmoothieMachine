@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Machine</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- Navigation links -->
+                <li><a href="#create">Create Smoothie</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="create">
+            <h1>Order Your Smoothie</h1>
+            <form id="smoothieForm">
+                <!-- Input for smoothie name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Dropdown for selecting smoothie base -->
+                <label for="base">Choose your base:</label>
+                <select id="base" name="base">
+                    <option value="water">Water</option>
+                    <option value="milk">Milk</option>
+                    <option value="yogurt">Yogurt</option>
+                    <option value="juice">Juice</option>
+                </select>
+
+                <!-- Checkboxes for selecting fruits -->
+                <label for="fruits">Choose your fruits:</label>
+                <input type="checkbox" id="banana" name="fruits" value="banana">Banana
+                <input type="checkbox" id="strawberry" name="fruits" value="strawberry">Strawberry
+                <input type="checkbox" id="blueberry" name="fruits" value="blueberry">Blueberry
+                <input type="checkbox" id="mango" name="fruits" value="mango">Mango
+
+                <!-- Checkboxes for selecting extras -->
+                <label for="extras">Extras:</label>
+                <input type="checkbox" id="protein" name="extras" value="protein">Protein Powder
+                <input type="checkbox" id="honey" name="extras" value="honey">Honey
+                <input type="checkbox" id="spinach" name="extras" value="spinach">Spinach
+                <input type="checkbox" id="chia" name="extras" value="chia">Chia Seeds
+
+                <!-- Buttons for ordering and resetting the form -->
+                <button type="button" onclick="orderSmoothie()">Order</button>
+                <button type="button" class="reset-btn" onclick="resetForm()">Reset</button>
+            </form>
+            <div id="orderSummary"></div> <!-- Display order summary -->
+        </section>
+
+        <section id="previousOrdersSection">
+            <h2>Previous Orders</h2>
+            <ul id="previousOrders"></ul> <!-- Display previous orders -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Smoothie Machine. All rights reserved.</p>
+        <p>Follow us on:
+            <!-- Social media links -->
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Facebook</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
